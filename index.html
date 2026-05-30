@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>내가 만약 외로울 때면 — 신앙 칼럼</title>
+<meta property="og:title" content="내가 만약 외로울 때면">
+<meta property="og:description" content="윤복희의 「여러분」을 통한 신앙 묵상">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+:root {
+  --cream: #FAF8F2;
+  --warm:  #F3EDD8;
+  --amber: #8B6914;
+  --gold:  #C5A96A;
+  --rule:  #D4C090;
+  --text:  #1E1810;
+  --dim:   #8A7A5A;
+}
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Noto Serif KR', Georgia, serif;
+  font-size: 17px;
+  line-height: 2.05;
+  -webkit-font-smoothing: antialiased;
+}
+.top-bar { height:5px; background:var(--amber); }
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 28px 100px;
+}
+/* 헤더 */
+.header {
+  padding: 44px 0 36px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 52px;
+}
+.series-tag {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: var(--amber);
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+h1 span { color: var(--amber); }
+.sub {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  color: var(--dim);
+  letter-spacing: 0.1em;
+}
+/* 문단 */
+p { margin-bottom: 1.8rem; }
+/* 드롭캡 */
+.drop-cap::first-letter {
+  float: left;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.82;
+  margin: 0.1em 0.12em 0 0;
+  color: var(--amber);
+}
+/* 구분선 */
+.divider {
+  text-align: center;
+  margin: 3.2rem 0;
+  color: var(--gold);
+  letter-spacing: 0.8em;
+  font-size: 0.85rem;
+}
+.divider::before, .divider::after {
+  content: "────";
+  color: var(--rule);
+  letter-spacing: 0;
+  margin: 0 0.5em;
+}
+/* 한국어 가사 */
+.lyric-ko {
+  background: var(--warm);
+  border-left: 4px solid var(--amber);
+  padding: 1.7rem 2rem;
+  margin: 2.2rem 0 2.5rem;
+  font-size: 0.96rem;
+  line-height: 2.35;
+}
+.lyric-ko .st { margin-bottom: 1.1rem; }
+.lyric-ko .st:last-child { margin-bottom: 0; }
+/* 영어 병기 가사 */
+.lyric-bi {
+  background: var(--warm);
+  border-left: 4px solid var(--gold);
+  padding: 1.7rem 2rem;
+  margin: 2.2rem 0 2.5rem;
+  font-size: 0.92rem;
+}
+.lp { margin-bottom: 1rem; }
+.lp:last-child { margin-bottom: 0; }
+.le {
+  display: block;
+  font-style: italic;
+  color: var(--amber);
+  margin-bottom: 0.15rem;
+}
+.lk {
+  display: block;
+  color: var(--dim);
+  padding-left: 0.6em;
+  font-size: 0.9rem;
+}
+/* 성구 */
+.scripture {
+  background: #F0E8CC;
+  border-left: 4px solid var(--amber);
+  padding: 1.2rem 1.8rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #5A4210;
+  line-height: 1.9;
+}
+.scripture cite {
+  display: block;
+  text-align: right;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--dim);
+  margin-top: 0.5rem;
+}
+/* 독백 */
+.monologue {
+  background: var(--warm);
+  border-top: 2px solid var(--amber);
+  border-bottom: 2px solid var(--amber);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 2.5rem 0;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 2;
+}
+/* 강조 블록 */
+.em-block {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--amber);
+  margin: 2rem 0;
+  letter-spacing: 0.1em;
+}
+/* 이미지 */
+.col-img {
+  width: 100%;
+  display: block;
+  margin: 2.5rem 0;
+}
+/* 인용 (작은 이탤릭) */
+.inline-q {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--dim);
+  margin: 1rem 0 2rem;
+}
+/* 유튜브 */
+.video-section {
+  background: var(--warm);
+  border-top: 3px solid var(--amber);
+  padding: 3rem 28px;
+  margin-top: 60px;
+}
+.video-section h2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: var(--amber);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.vid-grid {
+  max-width: 680px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media(max-width:580px){.vid-grid{grid-template-columns:1fr;}}
+.vid-label {
+  font-size: 0.78rem;
+  color: var(--dim);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.vid-frame {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.vid-frame iframe {
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  border: none;
+}
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.78rem;
+  color: var(--dim);
+  border-top: 1px solid var(--rule);
+  font-family: 'Noto Sans KR', sans-serif;
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<div class="page">
+
+<header class="header">
+  <p class="series-tag">신앙 칼럼 · Faith Column</p>
+  <h1>내가 만약 <span>외로울 때면</span></h1>
+  <p class="sub">윤복희 「여러분」을 통한 묵상</p>
+</header>
+
+<p class="drop-cap">아주 어렸을 때부터 어머니가 읊조리시던 노래였다.</p>
+
+<p>부엌에서, 마루에서 자주 흥얼거리셨다. 최근 몇 년 사이에는 교회에서 몇 번 소개해 주시기도 했다.</p>
+
+<p>어머니가 특히 좋아하시던 부분이 있었다. 끝부분에서 터져 나오는 그 구절.</p>
+
+<p style="text-align:center; font-style:italic; font-size:1.05rem; color:var(--amber); margin:2rem 0;">
+&ldquo;내가 내가 내가 내가 너의 기쁨이야.&rdquo;
+</p>
+
+<p>어릴 땐 그 노래가 누구의 것인지도 모른 채, 그냥 익숙했고, 그냥 좋았다.<br>윤복희의 「여러분」이었다.</p>
+
+<p>그렇게 수십 년이 흘렀다.</p>
+
+<div class="divider">✦</div>
+
+<p>2011년, 「나는 가수다」에서 임재범이 그 노래를 불렀다.</p>
+
+<p>노래를 부르는 게 아니라 토해내는 것 같았다.<br>
+청중이 울었다. 동료 가수들이 울었다.<br>
+원곡자 윤항기는 눈물을 흘리며 말을 잇지 못했다.</p>
+
+<p>프로그램 전 방영 기간을 통틀어 역대 최다 득표.<br>그 기록은 끝내 깨지지 않았다.</p>
+
+<p>왜 그토록 많은 사람이 울었을까. 임재범의 삶이 더해진 탓도 있겠지만, 그것만은 아니었을 것이다. 노래 자체가 외롭고 지친 어딘가를 정확히 짚어냈기 때문이다.</p>
+
+<div class="lyric-ko">
+  <div class="st">
+    네가 만약 괴로울때면 내가 위로해줄께<br>
+    네가 만약 서러울때면 내가 눈물이 되리<br>
+    어두운 밤 험한 길 걸을때<br>
+    내가 내가 내가 너의 등불이 되리<br>
+    허전하고 쓸쓸할때 내가 너의 벗 되리라
+  </div>
+  <div class="st">
+    나는 너의 영원한 형제야<br>
+    나는 너의 친구야<br>
+    나는 너의 영원한 노래야<br>
+    나는 나는 나는 나는 너의 기쁨이야
+  </div>
+</div>
+
+<p>단순하고 직접적인 약속.<br>그것이 사람의 가슴을 건드린다.</p>
+
+<img src="data:image/png;base64,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" alt="멜로디" class="col-img">
+
+<div class="divider">✦</div>
+
+<p>그런데 이 노래에는 알려지지 않은 면이 하나 있다.</p>
+
+<p>이 곡은 원래 영어로 먼저 쓰여졌다. 1979년 서울국제가요제에 출품할 때, 국제 무대인 만큼 영어 가사를 제출해야 했다. 그 영어 가사가 그대로 2절로 남았고, 국내 발표용으로는 이 영어 가사를 번역한 한국어 버전을 1절에 추가했다. 즉 영어가 원본이다.</p>
+
+<p>그 영어 2절을 들으면, 이 노래가 전혀 다른 노래가 된다.</p>
+
+<div class="lyric-bi">
+  <div class="lp"><span class="le">When you walk through the cloudy days,</span><span class="lk">흐리고 어두운 날들을 걷고 있을 때,</span></div>
+  <div class="lp"><span class="le">He said I'll be the one to be your cane.</span><span class="lk">그분이 말씀하시길 &mdash; 내가 너의 지팡이가 되어 줄게.</span></div>
+  <div class="lp"><span class="le">When you need someone to share your love,</span><span class="lk">누군가의 사랑이 간절히 필요할 때,</span></div>
+  <div class="lp"><span class="le">He said I'll be the one to be your love.</span><span class="lk">그분이 말씀하시길 &mdash; 내가 그 사랑이 되어 줄게.</span></div>
+  <div class="lp"><span class="le">So smile and look at me. And I will tell you what &mdash;</span><span class="lk">그러니 이제 웃고, 나를 봐. 내가 말해 줄게 있어.</span></div>
+  <div class="lp"><span class="le">Every every everybody's passing through this way.</span><span class="lk">모두가 다 이 길을 지나가고 있단다.</span></div>
+  <div class="lp"><span class="le">So have faith and be tall. You can't stop now.</span><span class="lk">그러니까 믿음을 갖고, 고개를 들어. 여기서 멈추면 안 돼.</span></div>
+  <div class="lp"><span class="le">Now is the start. This is the way. And only way.</span><span class="lk">이제 시작이야. 이것이 바로 그 길이야, 오직 하나뿐인.</span></div>
+  <div class="lp"><span class="le">We've got to march and go to a high up there.</span><span class="lk">우리 함께 저 높은 곳까지 걸어가는 거야.</span></div>
+  <div class="lp"><span class="le">He is the start and He is the way and only way.</span><span class="lk">그분이 그 시작이고, 그분이 그 길이야. 유일한 길.</span></div>
+</div>
+
+<p>영어 가사에서 &lsquo;그분(He)&rsquo;은 누구일까. 마지막 구절이 답을 준다.</p>
+
+<p>&ldquo;그분이 그 시작이고, 그분이 그 길이야. 유일한 길.&rdquo;<br>
+&lsquo;내가 길이요 진리요 생명이니&rsquo;라고 말씀하신 바로 그분 &mdash; 예수님이시다.</p>
+
+<p>흥미로운 점이 있다. 영어 가사에서 노래하는 사람은 예수님이 아니라는 것이다. 가수 자신이 예수님에 대해 노래하는 구조다. &ldquo;그분이 말씀하셨어 &mdash; 내가 너의 지팡이가 되어 줄게.&rdquo; 예수님은 &lsquo;그분(He)&rsquo;으로 등장하고, 노래하는 &lsquo;나&rsquo;는 그분의 말씀을 전하는 사람이다.</p>
+
+<p>그런데 이 영어 가사를 알고 나서 한국어 1절로 다시 돌아가면, 느낌이 달라진다.</p>
+
+<p>&ldquo;내가 내가 내가 너의 등불이 되리&rdquo; &mdash; 이 &lsquo;내가&rsquo;가 누구인지 이제 다르게 읽힌다. 영어 가사에서 &lsquo;그분이 말씀하셨어 &mdash; 내가 너의 지팡이가 되어 줄게&rsquo;라고 했던 바로 그 &lsquo;내가&rsquo;. 한국어 가사에서는 그 &lsquo;내가&rsquo;가 직접 앞에 나서는 것이다.</p>
+
+<p>가수의 목소리를 빌려 주님이 직접 부르시는 노래. 그렇게 화자는 가수 자신에서, 어느 순간 예수님으로 자연스럽게 옮겨온다.</p>
+
+<p>윤복희는 훗날 한 기독교 수련회에서 이 노래가 자신의 개인적인 신앙고백임을 밝혔다. 화자는 하나님이고, &lsquo;너&rsquo;는 바로 자신이었다고. 그렇게 이 노래는 단순한 위로의 노래를 넘어, 주님의 음성을 담은 고백이 된다.</p>
+
+<p>실제 이 곡을 만들 때부터 이러한 의도를 가지고 만들었는지는 모르겠지만, 지금 이 곡이 우리에게 주는 의미를 생각해보면 나름 이렇게도 해석해볼 만하다고 스스로 생각해본다.</p>
+
+<div class="divider">✦</div>
+
+<p>이 곡의 진짜 백미는 노래가 끝나는 부분에 있다.</p>
+
+<p>마지막 절정이 지나고 음악이 잦아드는 순간.<br>가수는 조용히 말한다.</p>
+
+<div class="monologue">
+  &ldquo;내가 만약 외로울 때면,<br>누가 나를 위로해주지? &hellip; 여러분.&rdquo;
+</div>
+
+<p>처음에는 그냥 지나쳤다. 노래도 끝나고 음악도 다 잦아든 자리에서 혼잣말처럼 조용히 읊조리는 것. 관객에게 말을 건네는 그 방식이 신선하기도 했다. 공연장 객석을 향한 인사쯤으로 들렸다.</p>
+
+<p>아마 대부분의 사람들도 그렇게 들었을 것이다. 굴곡진 삶을 살아온 한 가수가, 자신을 오래 기다려준 팬들을 향해, 당신들이 나의 위로였다고 말하는 것. 함께 울고 함께 버텨온 그 연대감. 그것으로도 충분히 와닿았고, 순간 감정이 올라오기도 했다.</p>
+
+<p>그런데 언젠가부터 그 말이 조금 다르게 들리기 시작했다. 이 글을 읽는 당신은 이미 감을 잡았을지도 모른다. 어쩌면 다들 이미 알고 있었는데, 나만 뒤늦게 알아챈 것일수도 있겠다.</p>
+
+<p>앞에서 말한 것처럼 이 곡의 &lsquo;내가&rsquo;가 예수님이라면, 이 말은 예수님이 읊조리시는 독백이 된다.</p>
+
+<p class="inline-q">&ldquo;내가 만약 외로울 때면, 누가 나를 위로해주지?&rdquo;</p>
+
+<p>주님이 가장 힘드신 때는 언제였을까.</p>
+
+<div class="em-block">십자가다.</div>
+
+<img src="data:image/png;base64,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" alt="십자가" class="col-img">
+
+<p>겟세마네 동산에서 땀이 핏방울처럼 떨어지던 밤. 죽기까지 따르겠다던 제자들은 잠들어 있었고, 하나님 아버지의 침묵은 길었다.</p>
+
+<p>채찍을 맞고, 가시관을 쓰고, 그 무거운 나무를 지고 걸었던 길. 인류 역사상 가장 깊은 외로움이 있었다면 그것은 바로 그 자리였을 것이다.</p>
+
+<p>그 십자가 앞에서 주님을 버티게 한 것은 무엇이었을까.</p>
+
+<p>무엇보다 하나님 아버지의 뜻이었을 것이다. 그리고 &mdash; 이 생각이 자꾸 마음에 걸린다 &mdash; 바로 &lsquo;우리&rsquo;였을 것이다.</p>
+
+<p>죄로 죽을 수밖에 없었던 우리. 지옥 백성이었던 우리. 그러나 십자가를 통해 하늘의 자녀가 될 우리. 주님은 그 아직 오지 않은 얼굴들을, 변화될 우리의 모습을 미리 보셨다. 그리고 그것이 위로였으리라. 그것이 십자가를 감당하게 한 동인이었으리라.</p>
+
+<p>이 대목에서, 예전에 읽었던 한 말씀이 새삼 다르게 다가온다.</p>
+
+<div class="scripture">
+  &hellip; 그는 그 앞에 있는 기쁨을 위하여 십자가를 참으사 부끄러움을 개의치 아니하시더니 &hellip;
+  <cite>히브리서 12:2</cite>
+</div>
+
+<p>그리고 여기에 또 하나의 목소리가 있다. 하나님 아버지의 목소리다.</p>
+
+<p>하나뿐인 아들을 십자가에 내어주시면서, 그분도 같은 물음을 품으셨을 것이다. 내가 하나밖에 없는 내 아들을, 누구의 죄를 대신해 십자가에 죽게 했는지 아느냐고. 그 대답도 다르지 않다. 바로 &lsquo;여러분&rsquo;이다.</p>
+
+<p>그렇다면 이 노래의 &lsquo;여러분&rsquo;은 단순한 관객이 아니다. 박수 치고 눈물 한 번 흘리는 청중이 아니다.</p>
+
+<p>주님의 수난 한가운데서, 그 고난을 감당하게 한 이름들이다. 구원받은 자녀들, 구원받을 우리 &mdash; 바로 당신이, 바로 내가 &mdash; 고난받는 예수님의, 그리고 아들을 내어주신 하나님 아버지의 위로였다는 것이다.</p>
+
+<div class="divider">✦</div>
+
+<p>이 사실 앞에 서서, 나는 나의 지금을 돌아본다.</p>
+
+<p>지금 나는 어떤 어려움 속에 있는가. 그 어려움 속에서 나는 무엇으로 버티고 있는가. 사람의 말 한마디에, 환경의 작은 변화에 아등바등하지 않는가. 아니면 잠시의 망각에 기대고 있지는 않은가.</p>
+
+<p>우리 주님은 십자가 앞에서, 아직 오지 않은 그 얼굴들을, 변화될 삶들을 미리 바라보시며 그 고난 앞에서 도망하지 않으셨는데..</p>
+
+<div class="scripture">
+  생각하건대 현재의 고난은 장차 우리에게 나타날 영광과 족히 비교할 수 없도다
+  <cite>로마서 8:18</cite>
+</div>
+
+<p>나도 그럴 수 있을까. 지금의 눈물을 머금은 채, 그 너머에 맺힐 열매와 그 영광을 미리 바라볼 수 있을까.</p>
+
+<p>주님이 함께하신다고, 인도하겠다고 말씀하신다.<br>그 음성 앞에서 어깨를 펴고 싶다. 당당해지고 싶다.</p>
+
+<p>그리고 기억한다. 내 존재 자체가 이미 그분의 위로였다는 것을.</p>
+
+<p>그리고 결심한다. 주님이 우리를 &lsquo;여러분&rsquo;이라 부르셨듯, 나도 오늘 누군가의 &lsquo;여러분&rsquo;이 되기를.</p>
+
+<div class="monologue" style="margin-top:2.5rem;">
+  &ldquo;내가 만약 외로울 때면,<br>누가 나를 위로해주지? &hellip; 여러분.&rdquo;
+</div>
+
+</div>
+
+<div class="video-section">
+  <h2>✦ &nbsp; 함께 듣기 &nbsp; ✦</h2>
+  <div class="vid-grid">
+    <div>
+      <p class="vid-label">「여러분」 에일리 &amp; 윤복희 (2014 / 1979)</p>
+      <div class="vid-frame">
+        <iframe src="https://www.youtube.com/embed/kQtLzWsToQI"
+                title="여러분 — 에일리 & 윤복희"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+    <div>
+      <p class="vid-label">임재범의 「여러분」 — 나는 가수다</p>
+      <div class="vid-frame">
+        <iframe src="https://www.youtube.com/embed/mbq4II_EOvE"
+                title="임재범 — 여러분"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>신앙 칼럼 &nbsp;·&nbsp; 「여러분」 묵상</footer>
+
+</body>
+</html>
